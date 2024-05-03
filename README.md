@@ -7,4 +7,4 @@ to run:
 
 ``cd Subnetting_Calculator``
 
-``./main.sh``
+``./main.sh`` or ``python main.py``
