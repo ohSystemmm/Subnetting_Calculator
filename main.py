@@ -25,7 +25,6 @@ def pyCalc(ipAddressDEC, suffixDEC):
     print(f"First Address:     {firstAddressDEC}")    
     print(f"Last Address:      {lastAddressDEC}")
 
-pyCalc("192.168.0.23", 24)
 # def header():
 #     print("  ____        _                _   _   _             ")     
 #     print(" / ___| _   _| |__  _ __   ___| |_| |_(_)_ __   __ _ ")
@@ -40,6 +39,8 @@ pyCalc("192.168.0.23", 24)
 #     print("  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|        ")  
        
 # header()
-#ipInput = input("IP Address: ")
-#suInput = int(input("Suffix: "))
-#pyCalc(ipInput, suInput)
+ipInput = input("IP Address: ")
+suInput = int(input("Suffix: "))
+
+# pyCalc("192.168.0.23", 24)
+pyCalc(ipInput, suInput)
