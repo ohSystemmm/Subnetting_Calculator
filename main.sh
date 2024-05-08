@@ -11,7 +11,7 @@ shCalc() {
 
     IFS='.' read -r -a ipSplit <<< "$ipAddressDEC"
 
-    networkAddressBIN=$(( (ipSplit[0] << 24) + (ipSplit[1] << 16) + (ipSplit[2] << 8) + (ipSplit[3] >> suffixDEC << suffixDEC)))
+    networkAddressBIN=$(( (ipSplit[0] << 24) + (ipSplit[1] << 16) + (ipSplit[2] << 8 & 3) + (ipSplit[3] >> suffixDEC << suffixDEC)))
     networkAddressDEC="$((networkAddressBIN >> 24 & 255)).$((networkAddressBIN >> 16 & 255)).$((networkAddressBIN >> 8 & 255)).$((networkAddressBIN & 255))"
 
     broadcastAddressBIN=$((networkAddressBIN | ((1 << suffixBIN) - 1)))
